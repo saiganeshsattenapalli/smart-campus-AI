@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | Smart Campus AI</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-container { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); text-align: center; width: 350px; }
+        .captcha-box { background: #e9ecef; padding: 10px; font-weight: bold; letter-spacing: 5px; margin: 15px 0; border-radius: 5px; font-size: 1.2rem; color: #333; }
+        input[type="text"] { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #1cc88a; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #17a673; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 style="color: #333;">Student Login</h2>
+        <form action="/student-portal" method="post">
+            <input type="text" placeholder="Enter Student ID" required>
+            
+            <div class="captcha-box">{{ captcha }}</div>
+            <input type="hidden" name="real_captcha" value="{{ captcha }}">
+            
+            <input type="text" name="user_captcha" placeholder="Enter Captcha Above" required>
+            
+            <button type="submit">Verify & Login</button>
+        </form>
+        <p style="margin-top: 20px;"><a href="/" style="color: #888; text-decoration: none; font-size: 0.9rem;">← Back to Home</a></p>
+    </div>
+</body>
+</html>
