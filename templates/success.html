@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submission Successful</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fc; text-align: center; padding-top: 100px; }
+        .success-box { background: white; display: inline-block; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .prediction-circle { width: 150px; height: 150px; background: #e3e6f0; border-radius: 50%; display: flex; flex-direction: column; justify-content: center; margin: 20px auto; border: 4px solid #4e73df; }
+        .days { font-size: 2.5rem; font-weight: bold; color: #4e73df; line-height: 1; }
+    </style>
+</head>
+<body>
+    <div class="success-box">
+        <h2 style="color: #1cc88a;">Successfully Submitted!</h2>
+        <p>Your <b>{{ category }}</b> complaint is being processed.</p>
+        <div class="prediction-circle">
+            <span class="days">{{ days }}</span>
+            <span style="font-size: 0.8rem; color: #888;">EST. DAYS</span>
+        </div>
+        <p style="color: #888; font-style: italic;">Predicted by Scikit-Learn Regression Model</p>
+        <a href="/student-portal" style="color: #4e73df; text-decoration: none; font-weight: bold;">Return to Dashboard</a>
+    </div>
+</body>
+</html>
