@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Raise Complaint</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fc; padding: 40px; }
+        .form-container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem; }
+        button { width: 100%; padding: 12px; background: #4e73df; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Submit Grievance</h2>
+        <form action="/submit-complaint" method="post">
+            <label>Issue Category</label>
+            <select name="category">
+                <option value="Academic">Academic</option>
+                <option value="Hostel">Hostel</option>
+                <option value="Mess">Mess</option>
+                <option value="Infrastructure">Infrastructure</option>
+            </select>
+            <label>Description</label>
+            <textarea name="description" rows="4" placeholder="Detail the issue here..." required></textarea>
+            <button type="submit">Analyze with AI Engine</button>
+        </form>
+    </div>
+</body>
+</html>
