@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Campus Feedback</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f8f9fc; padding: 40px; }
+        .feed-container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 12px; }
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        .btn-feed { background: #36b9cc; color: white; border: none; padding: 12px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="feed-container">
+        <h2>General Feedback</h2>
+        <form action="/submit-feedback" method="post">
+            <input type="text" name="name" placeholder="Name (Optional - Leave blank for Anonymous)" style="padding:10px; width:250px;">
+            <label>Rate your experience (1-5)</label>
+            <select name="rating">
+                <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+                <option value="4">⭐⭐⭐⭐ Good</option>
+                <option value="3">⭐⭐⭐ Average</option>
+                <option value="2">⭐⭐ Poor</option>
+                <option value="1">⭐ Very Bad</option>
+            </select>
+            <textarea name="comment" rows="4" placeholder="How can we improve the college?"></textarea>
+            <button type="submit" class="btn-feed">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
